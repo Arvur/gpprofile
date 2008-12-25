@@ -1,0 +1,3 @@
+#include "baggage.inc"
+
+IDD_GPPROFILE_COLLECTOR RCDATA "GpProf_Collector.pas"

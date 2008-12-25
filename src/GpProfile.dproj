@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{1d587535-c46b-42c0-8b1b-47afbb430550}</ProjectGuid>
+    <MainSource>GpProfile.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>GpProfile.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_UnitSearchPath>3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML</DCC_UnitSearchPath>
+    <DCC_ResourcePath>3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML</DCC_ResourcePath>
+    <DCC_ObjPath>3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML</DCC_ObjPath>
+    <DCC_IncludePath>3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML</DCC_IncludePath>
+    <DCC_Define>RELEASE</DCC_Define>
+    <DCC_SYMBOL_PLATFORM>False</DCC_SYMBOL_PLATFORM>
+    <DCC_UNIT_PLATFORM>False</DCC_UNIT_PLATFORM>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_UnitSearchPath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(BDS)\RaveReports\Lib;3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML;3rdParty\Ln</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(BDS)\RaveReports\Lib;3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML;3rdParty\Ln</DCC_ResourcePath>
+    <DCC_ObjPath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(BDS)\RaveReports\Lib;3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML;3rdParty\Ln</DCC_ObjPath>
+    <DCC_IncludePath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;$(BDS)\RaveReports\Lib;3rdParty\SynEdit;3rdParty\JLLabel;3rdParty\VT;3rdParty\EZDSL;3rdParty\mPasLex;3rdParty\Gp;3rdParty\OmniXML;3rdParty\Ln</DCC_IncludePath>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_SYMBOL_PLATFORM>False</DCC_SYMBOL_PLATFORM>
+    <DCC_UNIT_PLATFORM>False</DCC_UNIT_PLATFORM>
+    <DCC_WriteableConstants>True</DCC_WriteableConstants>
+    <DCC_RangeChecking>True</DCC_RangeChecking>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_MapFile>3</DCC_MapFile>
+    <DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;foo=bar;</DCC_UnitAlias>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_SYMBOL_DEPRECATED>False</DCC_SYMBOL_DEPRECATED>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Compiler><Compiler Name="UsePackages">False</Compiler><Compiler Name="Packages">vcl;rtl;vclx;vclactnband;dbrtl;vcldb;vcldbx;bdertl;dsnap;dbxcds;DbxCommonDriver;dbexpress;dsnapcon;adortl;indy;VclSmp;OmniXML_d2006;SynEdit_D10;XPdfPrint10;xmlrtl;IcsDel100;madBasic_;madDisAsm_;VirtualTreesD10;B305_r100;A406_R100;kbmMemD2006Run;TntUnicodeVcl_R100;ZMstr10R178;vclSvComV6D10;JvCoreD10R;JvSystemD10R;PowerPdfPkg10;JLLabel_D11</Compiler></Compiler><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters><Parameters Name="DebugSourceDirs">.</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">2</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">True</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Primoz Gabrijelcic</VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">2.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName">GpProfile</VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">(c) 2008 Primoz Gabrijelcic</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">GpProfile</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">GpProfile.dpr</Source></Source><Excluded_Packages>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <Excluded_Packages Name="$(BDS)\bin\dcltee100.bpl">TeeChart Components</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclie100.bpl">File c:\program files\codegear\rad studio\5.0\bin\dclie100.bpl not found</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclnet100.bpl">File c:\program files\codegear\rad studio\5.0\bin\dclnet100.bpl not found</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclwebsnap100.bpl">File c:\program files\codegear\rad studio\5.0\bin\dclwebsnap100.bpl not found</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclwbm100.bpl">File c:\program files\codegear\rad studio\5.0\bin\dclwbm100.bpl not found</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclsoap100.bpl">File c:\program files\codegear\rad studio\5.0\bin\dclsoap100.bpl not found</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\JvStdCtrlsD10D.bpl">JVCL Standard Controls</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dclcxLibraryD10.bpl">Express Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dcldxBarD10.bpl">ExpressBars by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dcldxmdsD10.bpl">ExpressMemData by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dclcxEditorsD10.bpl">ExpressEditors Library 5 by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dclcxExtEditorsD10.bpl">ExpressExtendedEditors Library 5 by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dclcxPageControlD10.bpl">Express Cross Platform PageControl by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dclcxGridD10.bpl">ExpressQuantumGrid 5 by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\dcldxBarExtItemsD10.bpl">ExpressBars extended items by Developer Express Inc.</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\PSdxPkg100.bpl">PdxSettings</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\FABComps_d10.bpl">FAB Delphi Components</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\gabr\Documents\Borland Studio Projects\Bpl\gpcomps_d10.bpl">GP Delphi Components</Excluded_Packages>
+    </Excluded_Packages></Delphi.Personality><ModelSupport>True</ModelSupport></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="GpProfile.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="3rdParty\Gp\DSiWin32.pas" />
+    <DCCReference Include="3rdParty\Gp\GpDelphiInfo.pas" />
+    <DCCReference Include="3rdParty\HV\HVStringBuilder.pas" />
+    <DCCReference Include="3rdParty\HV\HVStringData.pas" />
+    <DCCReference Include="gppcommon.pas" />
+    <DCCReference Include="gppFileEdit.pas" />
+    <DCCReference Include="gppFrameAnalyze.pas">
+      <Form>frmAnalyze</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFrameAnalyzeClasses.pas">
+      <Form>frmAnalyzeClasses</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFrameAnalyzeMethods.pas">
+      <Form>frmAnalyzeMethods</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFrameAnalyzeThreads.pas">
+      <Form>frmAnalyzeThreads</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFrameAnalyzeUnits.pas">
+      <Form>frmAnalyzeUnits</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFrameInstrument.pas">
+      <Form>frmInstrument</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFramePreferencesAnalysis.pas">
+      <Form>frmPreferencesAnalysis</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFramePreferencesConditionalDefines.pas">
+      <Form>frmPreferencesConditionalDefines</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFramePreferencesExcludedUnits.pas">
+      <Form>frmPreferencesExcludedUnits</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppFramePreferencesInstrumentation.pas">
+      <Form>frmPreferencesInstrumentation</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="gppIDT.pas" />
+    <DCCReference Include="gppLookAndFeel.pas" />
+    <DCCReference Include="gppMain.pas">
+      <Form>frmGpProfile</Form>
+    </DCCReference>
+    <DCCReference Include="gppParser.pas" />
+    <DCCReference Include="gppPreferences.pas">
+      <Form>frmPreferences</Form>
+    </DCCReference>
+    <DCCReference Include="gppPreferencesModel.pas" />
+    <DCCReference Include="gppProfileModel.pas" />
+    <DCCReference Include="gppProjectModel.pas" />
+    <DCCReference Include="gppProjectView.pas" />
+    <None Include="ModelSupport_GpProfile\default.txvpck" />
+  </ItemGroup>
+</Project>
