@@ -65,6 +65,7 @@ object frmInstrument: TfrmInstrument
       ScrollBarOptions.ScrollBars = ssVertical
       TabOrder = 0
       TreeOptions.MiscOptions = [toAcceptOLEDrop, toCheckSupport, toFullRepaintOnResize, toInitOnSave, toToggleOnDblClick, toWheelPanning]
+      OnChange = vtMethodsChange
       OnChecked = vtMethodsChecked
       OnGetText = vtMethodsGetText
       Columns = <>
