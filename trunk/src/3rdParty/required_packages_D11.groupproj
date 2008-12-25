@@ -1,0 +1,58 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{62462d14-f57f-4f5c-a811-c62e63687cf3}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject xmlns=""><Default.Personality></Default.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="JLLabel_D11">
+    <MSBuild Projects="JLLabel\JLLabel_D11.dproj" Targets="" />
+  </Target>
+  <Target Name="JLLabel_D11:Clean">
+    <MSBuild Projects="JLLabel\JLLabel_D11.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="JLLabel_D11:Make">
+    <MSBuild Projects="JLLabel\JLLabel_D11.dproj" Targets="Make" />
+  </Target>
+  <Target Name="SynEdit_D11">
+    <MSBuild Projects="SynEdit\SynEdit_D11.dproj" Targets="" />
+  </Target>
+  <Target Name="SynEdit_D11:Clean">
+    <MSBuild Projects="SynEdit\SynEdit_D11.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SynEdit_D11:Make">
+    <MSBuild Projects="SynEdit\SynEdit_D11.dproj" Targets="Make" />
+  </Target>
+  <Target Name="VirtualTreesD11">
+    <MSBuild Projects="Vt\VirtualTreesD11.dproj" Targets="" />
+  </Target>
+  <Target Name="VirtualTreesD11:Clean">
+    <MSBuild Projects="Vt\VirtualTreesD11.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="VirtualTreesD11:Make">
+    <MSBuild Projects="Vt\VirtualTreesD11.dproj" Targets="Make" />
+  </Target>
+  <Target Name="VirtualTreesD11D">
+    <MSBuild Projects="Vt\VirtualTreesD11D.dproj" Targets="" />
+  </Target>
+  <Target Name="VirtualTreesD11D:Clean">
+    <MSBuild Projects="Vt\VirtualTreesD11D.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="VirtualTreesD11D:Make">
+    <MSBuild Projects="Vt\VirtualTreesD11D.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="JLLabel_D11;SynEdit_D11;VirtualTreesD11;VirtualTreesD11D" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="JLLabel_D11:Clean;SynEdit_D11:Clean;VirtualTreesD11:Clean;VirtualTreesD11D:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="JLLabel_D11:Make;SynEdit_D11:Make;VirtualTreesD11:Make;VirtualTreesD11D:Make" />
+  </Target>
+</Project>

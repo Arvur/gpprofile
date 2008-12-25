@@ -1,0 +1,65 @@
+TRotateLabel  
+===============
+
+General:
+--------
+  A visual component for labels with rotate text and 3D-effects.
+
+  Freeware. Full sourcecode is included.
+  
+
+Acknowledgements:
+-----------------
+  This component is based on Borland's TCustomLabel-Component (VCL-source). 
+
+  Many thanks to Ray Konopka (Raize Software Solutions, Inc.) for the 
+  RZLABEL-Component with 3D-effects.    
+  
+Version:
+--------
+  1.0  written Mar'97
+
+
+Platform:
+---------
+  Delphi1 and Delphi2
+
+
+Installation:
+-------------
+  - Copy/Move JLLabel.pas and JLLabel.dcr to your components folder
+  - Install the component
+
+  If you use Delphi2, you must convert the VCL-bitmap, before you
+  start the installation:
+     - load JLLabel.dcr into Delphi's Imageeditor
+     - save this file under the same name    
+ 
+Usage:
+------
+  - place the component on your form
+  - set the property 'font' to a TrueType font
+  - set the property 'Escapement' (0..360 deg.)  
+  - set the property 'TextStyle'  (if you want 3D-effects)
+
+  that's all!
+
+
+Files:
+------
+  JLLabel.txt     this file
+  JLLabel.pas     source code
+  JLLabel.dcr     VCL-bitmap 16bit
+
+
+FREEWARE
+--------
+  Using of this component is free and at YOUR OWN RISK.
+
+  It is distributed as freeware, and it may be redistributed as such.
+
+  if you have any questions, comments or suggestions, 
+  please send me an eMail.
+
+  Joerg Lingner 
+  (jlingner@t-online.de)

@@ -1,0 +1,340 @@
+OmniXML is now developed using CVS repository. For access to CVS please refer to instructions on OmniXML home page (http://www.OmniXML.com).
+
+All newer releases will include file ChangeLog created directly from CVS. File history.txt will not be updated anymore.
+
+
+******************
+RELEASE 2004-04-18
+******************
+2004-04-17 * (mr)
+	Imported OmniXML source code to CVS repository.
+2004-04-17 OmniXML.inc (mr)
+	Renamed JEDI.inc to OmniXML_JEDI.inc to avoid using incorrectly version of JEDI.inc from another directory.
+2004-04-07 OmniXML.pas (mr)
+	Fixed bug when parsing IXMLCDATA element (incorrectly skipping ']' character)
+	Fixed bug when parsing IXMLComment element (incorrectly skipping '-' character)
+2004-04-07 OmniXMLUtils.pas (gp)
+	Added functions GetNodeTextFont and SetNodeTextFont.
+2004-04-07 OmniXMLUtils.pas (gp)
+	Modified XMLBinaryToStr to always process entire stream.
+	Modified XMLStrToBinary to clear output stream at beginning.
+2004-04-05 OmniXMLUtils.pas (gp)
+	Added overloaded versions of GetNodeText and GetNodeCData.
+2004-03-27 OmniXMLUtils.pas (gp)
+	Added function AppendNode.
+2004-03-25 OmniXMLPersistent.pas (gp)
+	Moved TOmniXMLWriter.Write and TOmniXMLReader.Read procedures to section.
+2004-03-25 OmniXMLUtils.pas (gp)
+	Fixed broken format strings (used for error reporting) in various XMLStrTo*
+		functions.
+2004-03-23 OmniXMLUtils.pas (gp)
+	Added two more variants of Base64Encode and Base64Decode.
+
+
+******************
+RELEASE 2004-03-03
+******************
+2004-03-01 OmniXMLProperties.pas (gp)
+	Adapted for OmniXMLUtils 1.19
+2004-03-01 OmniXMLUtils (gp)
+	GetNodeText*, GetNodeAttr*, and XMLStrTo* families extended with overloaded
+		versions without a default value, raising exception on invalid/missing XML node.
+
+		
+******************
+RELEASE 2004-02-02
+******************
+2004-02-06 OmniXML.pas (mr)
+	fixed encoding recognition in FindEncoding function
+2003-10-24 OmniXML.pas (gp)
+	added basic support for DOCTYPE parsing
+2004-01-16 OmniXMLUtils.pas (gp)
+	Functions OwnerDocument and DocumentElement made public.
+2004-01-05 OmniXMLUtils.pas (gp)
+	Remove some unnecessary 'overload' directives.
+	Added functions XMLStrToCurrency, XMLStrToCurrencyDef, XMLVariantToStr,
+		and XMLCurrencyToStr.
+	Added function FindProcessingInstruction.
+	Added functions XMLSaveToAnsiString, XMLLoadFromAnsiString.
+	Fixed XMLSaveToString which incorrectly returned UTF8 string instead of
+		UTF16.
+2003-12-12 OmniXMLUtils.pas (gp)
+	GetTextChild and SetTextChild made public.
+	New functions GetCDataChild and SetCDataChild.
+	New functions GetNodeCData and SetNodeCData.
+	New functions MoveNode and RenameNode.
+	Added functions XMLStrToExtended, XMLStrToExtendedDef, and XMLExtendedToStr.
+2003-10-01 OmniXMLUtils.pas (gp)
+	Fixed another bug in SelectNode and EnsureNode (broken since 1.15).
+2003-09-22 OmniXMLUtils.pas (gp)
+	Fixed bug in SelectNode and EnsureNode (broken since 1.15).
+2003-09-21 OmniXMLUtils.pas (gp)
+	Added function SelectNode.
+2003-05-08 OmniXMLUtils.pas (gp)
+	Overloaded Base64Encode, Base64Decode to work with strings too.
+2004-02-02 OmniXMLPersistent.pas (mr)
+	fixed reading datetime properties with value of 0
+	added writing/saving TCollection's properties
+2003-12-12 OmniXMLProperties.pas (gp)
+	Major modifications to allow reading of RSS files (and other XML
+		documents, of course).
+	TGpXMLDoc is now a TGpXMLData, too.
+	*List classes can now drop the 'listTag' in the constructor. Root
+		class node will be used as a list wrapper in this case.
+	Added indexed property Items[] to both *List classes.
+	Added Get/SetXMLAttrProp* to the TGpXMLData class.
+	Added Get/SetXMLPropCDATA to the TGpXMLData class.
+2003-11-27 OmniXMLProperties.pas (gp)
+	Renamed CreateChildren method into RecreateChildren to serve as a
+		visual reminder that it may be called when children are already created
+		(in which case old instances must be destroyed first).
+2003-12-14 OmniXMLConf.pas (mv)
+	document can be marked as read only (no changes are saved)
+2003-11-01 OmniXMLConf.pas (mv)
+	fixed bug in WriteIdentNode
+2003-10-25 OmniXMLConf.pas (mv)
+	initial version
+
+Demo programs
+	new demo in Properties subdirectory to show how to use OmniXMLProperties
+	new demo in xmlFormatter subdirectory - a simple XML document formatter
+
+
+******************
+RELEASE 2003-09-21
+******************
+2003-09-21 OmniXML (mr)
+	Added missing entity apos.
+	Corrected error messages that were using %1 and %2 instead of %s.
+
+
+******************
+RELEASE 2003-08-29
+******************
+2003-08-29 OmniXML (eb)
+	Removed bottleneck in the XML load/save routines (ShrinkEOL, ExpandEOL).
+		(code contributed by Erik Berry)
+
+******************
+RELEASE 2003-05-28
+******************
+2003-05-27 OmniXMLPersistent (mr)
+	Added tkEnumeration processing.
+
+******************
+RELEASE 2003-04-21
+******************
+2003-04-20 OmniXMLProperties (gp)
+	Bug fixed: Clearing TGpXMLList did not clear associated nodes.
+
+******************
+RELEASE 2003-04-03
+******************
+2003-04-03 OmniXMLDatabase.pas (gp)
+  Added methods DatasetToXMLFile, DatasetToXMLString, XMLFileToDataset,
+    XMLStringToDataset.
+  Added parameter doNotExport to the Dataset*ToXML* methods containing
+    semicolon-delimited list of fields not to be exported.
+  Added parameter doNotImport to the XML*ToDataset* methods containing
+    semicolon-delimited list of fields not to be imported.
+  Added optional parameter outputFormat to the DatasetToXMLDocument
+    method.
+  DatasetToXML wrapped into ds.DisableControls/ds.EnableControls. This
+    also applies to all DatasetToXML* methods. Initial position in the
+    dataset is now preserved.
+  Fixed XMLNodeToDatasetRow to ignore case of the field name.
+  Added testing for rootTag non-emptiness.
+  Added <?xml version="1.0"?> to the exported XML document.
+  Modified XMLToDataset method to skip non-ELEMENT_NODE nodes so one can
+    add comments to the XML file.
+  Modified XML*ToDataset* methods to raise exception EOmniXMLDatabase
+    on errors.
+  Modified XMLNodeToDatasetRow to raise exception EOmniXMLDatabase if
+    XML field doesn't exist in the table. This exception can be skipped
+    if option odbIgnoreMissingColumns is passed to the XML*ToDataset*
+    method.
+  Modified XMLNodeToDatasetRow to raise exception EOmniXMLDatabase if
+    database column is not of a supported type. This exception can be
+    skipped if option odbIgnoreUnsupportedColumns is passed to the
+    XML*ToDataset* method.
+  Modified DatasetRowToXMLNode to raise exception EOmniXMLDatabase if
+    database column is not of a supported type. This exception can be
+    skipped if option odbIgnoreUnsupportedColumns is passed to the
+    Dataset*ToXML* method.
+
+2003-04-03 OmniXMLUtils.pas (gp)
+  Filter* and Find* routines modified to skip all non-ELEMENT_NODE nodes.
+
+******************
+RELEASE 2003-02-24
+******************
+2003-02-24 OmniXML.pas (mr)
+	Fixed bug in TXMLTextStream.ProcessChar procedure (corrected #$0010 to #$000A). Line counting is now correctly processed.
+
+******************
+RELEASE 2003-02-22
+******************
+2003-02-22 OmniXML.pas (mr)
+	Additional "End-of-Line Handling" fixes.
+	Added speed optimization code in ShrinkEOL and ExpandEOL functions.
+
+2003-02-22 OmniXML_MSXML.pas (mr)
+	Switched to MSXML (valid for Delphi 6 and newer). Delphi 5 users should still use MSXML2_TLB.pas.
+
+******************
+RELEASE 2003-02-19
+******************
+2003-02-19 OmniXML.pas (mr)
+	Fixed "End-of-Line Handling" error in TXMLNode.GetText function.
+
+******************
+RELEASE 2003-01-16
+******************
+2003-01-16 OmniXMLProperties.pas (gp)
+  Fixed range check error in SetXMLPropDWORD.
+
+2003-01-15 OmniXMLUtils.pas (gp)
+  Safer implementation of some internal functions.
+
+2003-01-13 OmniXMLProperties.pas (gp)
+  Removed processing of default values in SetXMLProp* setters - it was
+    causing a confusion when used in conjunction with the Assign method.
+  Added TGpXMLData.InitChildNodes that greatly simplifies data node
+    initialization.
+  Fixed saving - volatile/private markers are now not saved in the
+    document element node anymore.
+
+2003-01-13 OmniXMLUtils.pas (gp)
+  CopyNode, and CloneDocument made MS XML compatible.
+  Automatic DocumentElement dereferencing now works with MS XML.
+  Fixed buggy GetNode(s)Text*/SetNode(s)Text* functions.
+  Fixed buggy CopyNode and CloneDocument.
+  Adapted for latest fixes in OmniXML 2002-01-13.
+
+2003-01-13 OmniXML.pas (mr)
+  Included child of IXMLText node when writing to stream.
+  Fixed: IXMLDocument.OwnerDocument now properly returns nil.
+  Fixed setting IXMLNode.Text procedure - now deletes all child nodes.
+  Implemented IXMLNode.CloneNode.
+
+RELEASE 2003-01-11:
+
+2003-01-11 OmniXML.pas (mr)
+  Corrected indentation when writing processing instruction node with ofIndent
+    format.
+  Fixed PreserveWhiteSpace property handling.
+
+2003-01-09 OmniXMLUtils.pas (gp)
+  Fixed filterProc support in the CopyNode.
+
+2003-01-08 OmniXMLProperties.pas (gp)
+  Standalone AsString fixed to work with volatile nodes.
+  TGpXMLDoc.AsString fixed to twork with volatile nodes.
+
+2003-01-07 OmniXMLUtils.pas (gp)
+  Added functions XMLLoadFromRegistry and XMLSaveToRegistry.
+  Added function CloneDocument.
+  Added parameter filterProc to the CopyNode procedure.
+  Smarter GetNodeAttr (automatically dereferences DocumentElement if
+    root xml node is passed to it).
+
+2003-01-07 OmniXMLProperties.pas (gp)
+  Added TGpXMLVolatileData class. It is only returned as a part of the
+    AsString result and is _not_ saved in the TGpXMLDoc.SaveTo* methods.
+
+2002-12-26 OmniXMLUtils.pas (gp)
+  Added procedure CopyNode that copies contents of one node into another.
+  Modified DeleteAllChildren to preserve Text property.
+
+2002-12-26 OmniXMLProperties.pas (gp)
+  Added 'standalone' support to the TGpXMLData class.
+  Added parameterless constructor to the TGpXMLData class.
+  Added 'load from string' constructor to the TGpXMLData class.
+  Added property AsString to the TGpXMLData class.
+
+2002-12-22 OmniXMLProperties.pas (gp)
+  Added property AsString to the TGpXMLDoc class.
+
+2002-12-21 OmniXMLUtils.pas (gp)
+  Smarter GetNodeText (automatically dereferences DocumentElement if
+    root xml node is passed to it).
+
+2002-12-20 OmniXML.pas (mr)
+  TXMLNode.GetNodeValue is now virtual method.
+  TXMLAttr.GetNodeValue now does EOL handling.
+  TXMLNode.GetText is now using recursion to get text from all subnodes.
+  TXMLAttr.GetText now checks for PreserveWhiteSpace setting.
+  Speed optimization in TXMLText.ReadFromStream procedure.
+  Modified TXMLTextStream.ProcessChar procedure.
+
+2002-12-17 OmniXML_LookupTables.pas (mr)
+  Switched to RLE encoded lookup table (by Erik Berry).
+
+2002-12-17 OmniXML.pas (mr)
+  Fixed indentation when saving non-element nodes to document.
+
+RELEASE 2002-12-16
+
+2002-12-16 OmniXML_LookupTables.pas (mr)
+  Included handling for new compiler define: 'OmniXML_DynamicLookupTables'.
+    When defined, OmniXML will dynamically create lookup tables, thus reducing
+    size of the program by approx. 60 KB.
+
+2002-12-16 OmniXML_MSXML.pas (mr)
+  Removed ELEMENT_NODE constant.
+
+2002-12-16 OmniXML.pas (mr)
+  Removed (override) SelectNodes, SelectSingleNode procedures from TXMLDocument.
+    Those procedures were copied from TXMLNode, except that they provided
+    DocumentElement as root (not compatible with MS XML parser)
+  Implemented GetPreviousSibling.
+  Fixed GetNextSibling.
+  Implemented GetElementsByTagName for IXMLDocument and IXMLNode classes.
+
+*   2001-10-22: resolved problems with freeing objects on exception            *
+*   2001-10-20: TXMLDocument.Load now uses TMemoryStream for faster perfomance *
+*   2001-10-09: optimized CharIs_ function and gained 3000% better speed :)    *
+*                 thx to (gp) for the idea                                     *
+*               CharIs_ functions are now public                               *
+*   2001-10-07: introduced Reference2Char                                      *
+*               fixed attribute name parsing                                   *
+*               finished IXMLParseError implementation                         *
+*   2001-09-11: switched names for WriteToStream and SaveToStream              *
+*   2001-09-10: (gp) LoadFromStream is now public method                       *
+*               introduced WriteToStream                                       *
+*               optimized EncodeText, ReadChar procedures                      *
+*               introduced TXMLTextStream.FMode and .FSize private variables   *
+*   2001-07-26: restored whitespace handling to old settings                   *
+*   2001-07-16: bugfix TXMLTextStream.IncreaseIndent                           *
+*               added BOOL_VALUES variable                                     *
+*               corrected whitespace handling                                  *
+*   2001-07-15: made GpTextStream compatible                                   *
+*   2001-06-25: introduced formatted output                                    *
+*   2001-06-18: (mr) bugfix Remove(Item: IUnknown)                             *
+*               renamed IndexOfNode (back) to IndexOf                          *
+*   2001-06-18: (gp) bugfix IndexOf(Item: IUnknown)                            *
+*   2001-05-26: added TXMLCharacterData.EncodeText                             *
+*   2001-05-19: huge code cleanup                                              *
+*   2001-05-15: TInputStream.SetStream is now virtual                          *
+*   2001-04-18: TXMLNode.SetText clears any previous text                      *
+*   2001-04-12: added TXMLElement.SetTagName function due to bug in            *
+*                 TagName handling                                             *
+*   2001-03-10: added UniTrim function, minor optimizations                    *
+*               renamed TXMLCustomList.IndexOf to IndexOfNode                  *
+*               removed EncodeText function                                    *
+*   2000-11-27: bugfix TXMLDocument.LoadXML                                    *
+*   2000-11-21: bugfix TXMLDocument.SetDocumentElement                         *
+*   2000-11-11: added BOOL_TRUE and BOOL_FALSE constants                       *
+*               added GetAttributeNode function                                *
+*               corrected intf bug in TXMLNamedNodeMap.SetNamedItem function   *
+*               corrected intf bug in TXMLNodeList.AddNode function            *
+*   2000-10-30: corrected entity reference handling (text, attr-value)         *
+*   2000-10-28: added function CreateXMLDoc                                    *
+*               renamed ReadNextChar to ProcessChar                            *
+*   2000-10-26: corrected TXMLElement.GetAttribute bug                         *
+*   2000-10-20: added IInputStream, IOutputStream                              *
+*               changed whitespace handling                                    *
+*   2000-10-17: (gp) added TXMLNode.IndexOf function                           *
+*   2000-10-10: (gp) fixed interface refcount bugs                             *
+*   2000-10-06: added IXMLParseError                                           *
+*   2000-10-05: initial release                                                *

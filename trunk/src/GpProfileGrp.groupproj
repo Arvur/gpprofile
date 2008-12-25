@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{9120d8cb-de59-49fe-8140-9eefff01aa69}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="..\test\bench\accuracy\accuracy.dproj" />
+    <Projects Include="GpProfile.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="GpProfile">
+    <MSBuild Projects="GpProfile.dproj" Targets="" />
+  </Target>
+  <Target Name="GpProfile:Clean">
+    <MSBuild Projects="GpProfile.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="GpProfile:Make">
+    <MSBuild Projects="GpProfile.dproj" Targets="Make" />
+  </Target>
+  <Target Name="accuracy">
+    <MSBuild Projects="..\test\bench\accuracy\accuracy.dproj" Targets="" />
+  </Target>
+  <Target Name="accuracy:Clean">
+    <MSBuild Projects="..\test\bench\accuracy\accuracy.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="accuracy:Make">
+    <MSBuild Projects="..\test\bench\accuracy\accuracy.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="GpProfile;accuracy" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="GpProfile:Clean;accuracy:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="GpProfile:Make;accuracy:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>
