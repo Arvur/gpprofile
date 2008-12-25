@@ -45,8 +45,8 @@ unit gppFrameInstrument;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, 
-  Dialogs, VirtualTrees, StdCtrls, ExtCtrls, JLLabel, Contnrs,
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, VirtualTrees, StdCtrls, ExtCtrls, JLLabel, Contnrs, 
   gppProjectModel,
   gppParser;
 
@@ -71,6 +71,7 @@ type
     procedure vtClassesChecked(Sender: TBaseVirtualTree; Node: PVirtualNode);
     procedure vtClassesGetText(Sender: TBaseVirtualTree; Node: PVirtualNode; Column:
       TColumnIndex; TextType: TVSTTextType; var CellText: WideString);
+    procedure vtMethodsChange(Sender: TBaseVirtualTree; Node: PVirtualNode);
     procedure vtMethodsChecked(Sender: TBaseVirtualTree; Node: PVirtualNode);
     procedure vtMethodsGetText(Sender: TBaseVirtualTree; Node: PVirtualNode; Column:
       TColumnIndex; TextType: TVSTTextType; var CellText: WideString);
@@ -574,6 +575,13 @@ begin
     cvtClass:      CellText := FClassList[GetClassIndex(Node)];
   end;
 end; { TfrmInstrument.vtClassesGetText }
+
+procedure TfrmInstrument.vtMethodsChange(Sender: TBaseVirtualTree; Node: PVirtualNode);
+begin
+  // TODO 1 -oPrimoz Gabrijelcic : Show source line in the bottom panel
+  if GetMethodViewType(node) = mvtMethod then 
+    FModel.SyncSource(GetUnitUnitData, GetMethodProcData(node));
+end; { TfrmInstrument.vtMethodsChange }
 
 procedure TfrmInstrument.vtMethodsChecked(Sender: TBaseVirtualTree; Node: PVirtualNode);
 var

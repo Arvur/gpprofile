@@ -81,6 +81,7 @@ type
     function  IsOpen: boolean;
     procedure OpenProject(const fileName: string);
     function  Parse: boolean;
+    procedure SyncSource(unitData: TUnit; procData: TProc);
     property Name: string read GetName write SetName;
     property Project: TProject read GetProject;
     property ProjectPreferences: TGppPreferences read GetProjectPreferences;
@@ -147,6 +148,7 @@ type
     function  IsOpen: boolean;
     procedure OpenProject(const fileName: string);
     function  Parse: boolean;
+    procedure SyncSource(unitData: TUnit; procData: TProc);
     property Name: string read GetName write SetName;
     property Project: TProject read GetProject;
     property ProjectPreferences: TGppPreferences read GetProjectPreferences;
@@ -388,5 +390,10 @@ procedure TGppProjectModel.SetOnParsing(value: TGppProjectModelParsingEvent);
 begin
   gpmOnParsing := value;
 end;
+
+procedure TGppProjectModel.SyncSource(unitData: TUnit; procData: TProc);
+begin
+  // TODO 1 -oPrimoz Gabrijelcic : implement: TGppProjectModel.SyncSource
+end; { TGppProjectModel.SyncSource }
 
 end.
