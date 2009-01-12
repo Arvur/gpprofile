@@ -580,7 +580,7 @@ procedure TfrmInstrument.vtMethodsChange(Sender: TBaseVirtualTree; Node: PVirtua
 begin
   // TODO 1 -oPrimoz Gabrijelcic : Show source line in the bottom panel
   if GetMethodViewType(node) = mvtMethod then 
-    FModel.SyncSource(GetUnitUnitData, GetMethodProcData(node));
+    FModel.!!SyncSource(GetUnitUnitData, GetMethodProcData(node));
 end; { TfrmInstrument.vtMethodsChange }
 
 procedure TfrmInstrument.vtMethodsChecked(Sender: TBaseVirtualTree; Node: PVirtualNode);
